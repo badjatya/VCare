@@ -1,0 +1,649 @@
+/* =======================================================================
+Template Name: Dil Hospital
+Author:  SmartEye Adminpanel
+Author URI: www.smarteyeapps.com
+Version: 1.0
+coder name:Prabin Raja
+Description: This Template is created for web template
+======================================================================= */
+
+/* ===================================== Import Less ================================== */
+@import 'variable';
+/* ===================================== Basic CSS ================================== */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+}
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: #444;
+}
+
+a:hover {
+    color: #444;
+}
+
+ul {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+a:hover,
+a:focus,
+input,
+textarea {
+    text-decoration: none;
+    outline: none;
+}
+.center{
+    text-align: center;
+}
+.left{
+    text-align: left;
+}
+.right{
+    text-align: right;
+}
+.cp {
+    cursor: pointer
+}
+html,body{
+    height: 100%;
+}
+p {
+    margin-bottom: 0px;
+    width: 100%;
+}
+.no-padding {
+    padding: 0px;
+}
+
+.no-margin {
+    margin: 0px;
+
+}
+.hid{
+    display: none;
+}
+.top-mar{
+    margin-top: 15px;
+}
+.h-100{
+    height: 100%;;
+}
+::placeholder {
+    color: #747f8a !important;
+    font-size: 13px;
+    opacity: .5 !important;
+}
+.container-fluid{
+    padding: 0px;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: $mouse-500;
+}
+strong{
+	font-family: $mouse-500;
+}
+body{
+    background-color:#f7f7ff !important;
+    font-family: $mouse-300;
+   color: #6A6A6A;
+
+}
+
+.session-title{
+	padding: 30px;
+	margin: 0px;
+	h2{
+		width: 100%;
+		text-align: center;
+
+	}
+	p{
+		max-width: 850px;
+		text-align: center;
+		float: none;
+		margin: auto;
+	}
+	span{
+		float: right;
+		font-style: italic;
+	}
+}
+.inner-title{
+	padding: 20px;
+	padding-left: 0px;
+    margin-bottom: 30px;
+	h2{
+		width: 100%;
+		text-align: center;
+		font-size: 2rem;
+		font-family: $slab;
+	}
+	p{
+		width: 100%;
+		text-align: center;
+	}
+}
+.page-nav{
+    padding: 40px;text-align: center;
+    padding-top: 120px;
+    ul{float: none;margin: auto;}
+    
+     @media screen and (max-width: 409px){
+         
+    }
+    h2{
+        font-size: 36px;
+        width: 100%;
+        color: #444;
+        @media screen and (max-width: 600px){
+            font-size: 26px;
+        }
+    }
+    ul li{
+        float: left;
+        margin-right: 10px;
+        margin-top: 10px;
+        font-size: 16px;
+        i{
+            width: 30px;
+            text-align: center;
+            color: #444;
+           
+        }
+        a{
+            color: #444;
+        }
+    }
+}
+.btn-success{
+	background-color: #00ab9f;
+	border-color: #00ab9f;
+	&:hover{
+		background-color: #00ab9f !important;
+		border-color: #00ab9f !important;
+	}
+	&:active{
+		background-color: #00ab9f !important;
+		border-color: #00ab9f !important;
+	}
+	&:focus{
+		background-color: #00ab9f !important;
+		border-color: #00ab9f !important;
+		box-shadow: none !important;
+	}
+}
+.btn-info{
+	background-color: #00a8df;
+	border-color: #00a8df;
+	&:hover{
+		background-color: #00a8df !important;
+		border-color: #00a8df !important;
+	}
+	&:active{
+		background-color: #00a8df !important;
+		border-color: #00a8df !important;
+	}
+	&:focus{
+		background-color: #00a8df !important;
+		border-color: #00a8df !important;
+		box-shadow: none !important;
+	}
+}
+.btn{
+	@include card-1();
+}
+.form-control{
+	&:focus{
+		box-shadow: none !important;
+		border:2px solid  #00a8df;
+	}
+
+}
+.btn-light{
+	background-color: #FFF;
+	color: #3F3F3F;
+}
+@media screen and (max-width: 1199px){
+	.container{
+		max-width: 100%;
+	}
+}
+.collapse.show {
+
+    display: block !important;
+
+}
+
+.form-control:focus{
+	box-shadow: none;
+	border: 2px solid #0d7a40 !important;
+}
+.form-control{
+	background-color: #F8F8F8;
+	margin-bottom: 20px;
+	&:focus{
+		background-color: #FFF;
+		border-color: #CCC;
+	}
+}
+/* ===================================== Header CSS ================================== */
+
+header{
+    @include shado-1();
+    background-color: #FFF;
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+    ul{
+        li{
+            float: left;
+            padding: 30px 20px;
+            font-family: $mouse-500;
+            font-size: 16px;
+            @media screen and (max-width: 824px){
+                padding: 30px 16px;
+            }
+            @media screen and (max-width: 767px){
+                float: none;
+                padding: 10px;
+                border-top: 1px solid #CCC;
+            }
+        }
+    }
+    img{
+        margin-top: 10px;
+        max-width: 230px;
+        @media screen and (max-width: 767px){
+             margin-top:5px;
+            margin-bottom:5px;
+        }
+    }
+    .btn{
+         font-family: $mouse-500;
+        margin-top: 22px;
+    }
+}
+.scroll-to-fixed-fixed{
+      @include shado-1();
+    background-color: #FFF;
+    z-index: 9999;
+}
+.small-menu{
+    float: right;
+    color: #00ab9f;
+    font-size: 32px;
+    margin-top: 19px;
+    margin-right: 12px;
+    @media screen and (max-width: 405px){
+        margin-top: 14px;
+    }
+}
+
+/* ===================================== Slider Style CSS ================================== */
+
+.slider { position: relative; padding-top: 85px; 
+    @media screen and (max-width: 767px){
+        padding-top: 71px;
+    }
+}
+.slider-captions { position: absolute; bottom: 160px; text-align: center;
+ @media screen and (max-width: 1050px){
+        bottom: 100px !important;
+        .slider-title{
+            font-size: 42px;
+        }
+    }
+    @media screen and (max-width: 810px){
+        bottom: 50px !important;
+        .slider-title{
+            font-size: 32px;
+        }
+    }
+    @media screen and (max-width: 572px){
+        display: none;
+    }
+
+}
+.slider-title { font-size: 66px; font-weight: 600; color: #fff; letter-spacing: -3px;}
+.slider-text {margin-bottom: 20px; color: #fff; }
+.slider-img {background: -moz-linear-gradient(top, rgba(45, 32, 44, 0.5) 0%, rgba(45, 32, 44, 0.5) 100%);
+    background: -webkit-linear-gradient(top, rgba(45, 32, 44, 0.5) 0%, rgba(45, 32, 44, 0.5) 100%);
+    background: linear-gradient(to bottom, rgba(45, 32, 44, 0.5) 0%, rgba(45, 32, 44, 0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc1b2429', endColorstr='#cc1b2429', GradientType=0);
+    position: relative;}
+.slider-img img{position: relative;z-index: -1;}
+.slider .owl-nav {  }
+.slider .owl-nav .owl-prev,.slider .owl-nav .owl-next { color: #fff; display: inline-block; zoom: 1; margin: 5px;
+ padding: 6px 12px; font-size: 22px; -webkit-border-radius: 23px; -moz-border-radius: 23px; border-radius: 23px;
+ background: transparent; filter: Alpha(Opacity=50); line-height: 1; border: 2px solid #fff; }
+.owl-controls.clickable .owl-buttons div:hover { filter: Alpha(Opacity=100); opacity: 1; text-decoration: none;
+ background-color: #fff; }
+.slider .owl-nav .owl-prev { position: absolute; top: 40%; left: 0px;}
+.slider .owl-nav .owl-next { position: absolute; top: 40%; right: 0px; }
+.slider .owl-dots .owl-dot { position: relative; text-align: center; bottom: 40px; max-width: 1140px; margin: 0 auto; }
+.slider .owl-dots .owl-dot { }
+.slider .owl-dots .owl-dot span { display: block; width: 14px; height: 14px; margin: 0px 0px 10px 10px;
+ filter: Alpha(Opacity=50);    /*IE7 fix*/ opacity: 0.8; -webkit-border-radius: 20px; -moz-border-radius: 20px;
+  border-radius: 20px; border: 2px solid #fff; float: left; }
+.slider .owl-dots .owl-dot.active span { background-color: #fff; }
+.slider .owl-dots .owl-dot.active span, .slider .owl-controls.clickable .owl-page:hover span 
+{ background-color: #fff; filter: Alpha(Opacity=100);    /*IE7 fix*/ opacity: 1; }
+.slider{
+    .col-lg-offset-2{
+        float: none;
+        margin: auto;
+    }
+}
+
+.our-blog{
+	@include big-padding();
+    background-color: #FFF;
+    padding-bottom: 100px ;
+	@media screen and (max-width: 600px){
+		padding: 20px 10px;
+		.blog-cont{
+			padding: 0px;
+		}
+		.blog-smk{
+			padding: 0px;
+		}
+	}
+	.blog-cont{
+		float: none;
+		margin: auto;
+        
+	}
+	.blog-single{
+		text-align: center;
+		margin-top: 20px;
+		.figure{
+			margin-bottom: 0px;
+		}
+		margin-bottom: 40px;
+	}
+	.blog-single-det{
+		margin: auto;
+		padding: 20px;
+		z-index: 99;
+		@include shado-3();
+		width: 90%;
+		position: relative;
+		margin-top: -80px;
+		background-color: #FFF;
+		.btn{
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		span{
+			font-size: 13px;
+			color: #b5316a;
+		}
+		h6{
+			font-size: 1.3rem;
+		}
+		p{
+			margin-top: 15px;
+			margin-bottom: 15px;
+			font-size: 1rem;
+		}
+	}
+}
+
+/* ===================================== Doctor Say CSS ================================== */
+
+.doctor-message{
+  
+    background-image: url('../images/slider/slider-3.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+   
+    
+ 
+    .inner-lay{
+        background-color: rgba(0,171,159, 0.9);
+       @include big-padding();
+        padding-bottom: 0px;
+        color: #FFF;
+    }
+    .doc-img{
+        text-align: center;
+        img{
+            width: 400px;
+            margin-top: -140px;
+        }
+    }
+    .doc-det{
+        h2{
+            font-size: 42px;
+            margin-bottom: 0px;
+        }
+        span{
+            font-weight: 600;
+            margin-top: -5px;
+        }
+        p{
+            margin-top: 30px;
+            font-size: 18px;
+            text-indent: 20px;
+        }
+        h4{
+            margin-top: 30px;
+        }
+    }
+}
+
+/* ===================================== Mission Vision CSS ================================== */
+
+.mosion-vision{
+    @include big-padding();
+    background-color: #FFF;
+    .single-dd{
+        background-color: #f6f4f6;
+        padding: 30px;
+        border-radius: 5px;
+        @media screen and (max-width: 991px){
+            margin-bottom: 30px;
+        }
+        p{
+            font-size: 1.1rem;
+            text-indent: 20px;
+            text-align: justify;
+        }
+        .btn{
+            float: right;
+        }
+    }
+}
+
+/* ===================================== Session Type CSS ================================== */
+
+.sesion-type{
+     @include big-padding();
+    .single-sess{
+        @include card-1();
+        background-color: #FFF;
+         margin-bottom: 30px;
+        img{
+            width: 100%;
+        }
+        p{
+            padding: 10px;
+            font-family: $mouse-500;
+            border-radius: 5px;
+            text-align: center;
+        }
+    }
+    .sess-ok{
+        padding: 57px 30px;
+        text-align: center;
+    }
+}
+
+/* ===================================== Fooer CSS ================================== */
+
+.footer{
+    @include big-padding();
+    padding-bottom: 0px;
+    background-color: #444;
+    color: #FFF;
+    h2{
+        font-size: 26px;
+        margin-top: 10px;
+    }
+    p{
+        text-align: justify;
+        text-indent: 20px;
+    }
+    .link-list{
+        li{
+            padding: 10px;
+            border-bottom: 1px solid #6C6C6C;
+            a{
+                color: #FFF;
+            }
+            i{
+                float: right;
+            }
+        }
+    }
+    .map-img{
+        font-weight: 600;
+        font-size: 17px;
+        padding-left: 20px;
+    }
+    
+}
+.copy{
+        padding: 20px;
+        background-color: #2E2E2E;
+        color: #FFF;
+    a{
+        color: #FFF;
+    }
+    span{
+        float: right;
+        i{
+            margin-right: 20px;
+        }
+        @media screen and (max-width: 777px) {
+            display: none;
+        }
+    }
+}
+
+/* ===================================== About Us Style  ================================== */
+
+.about-us{
+    @include big-padding();
+    background-color: #FFF;
+    @media screen and (max-width: 1199px){
+        .container{
+            max-width: 100%;
+        }
+    }
+    
+       
+    img{
+        width: 100%;
+        padding: 10px;
+        background-color: #FFF;
+        @include shado-1();
+        @media screen and (max-width: 767px){
+             margin-bottom: 30px;
+        }
+    }
+    h2{
+        font-size: 22px;
+    }
+    p{
+        text-align: justify;
+        text-indent: 20px;
+    }
+    
+}
+
+/* ===================================== Gallery Style  ================================== */
+
+.gallery-filter{
+    width: 100%;
+    text-align: center;
+    .btn{
+        background-color: #FFF;
+    }
+}
+.gallery{
+    padding: 30px;
+    background-color: #FFF;
+}
+.gallery-title
+{
+    font-size: 36px;
+    color: #00ab9f;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 7.5%;
+    left: 46.5%;
+    height: 45px;
+    border-bottom: 1px solid #00ab9f;
+}
+.filter-button
+{
+    font-size: 18px;
+    border: 1px solid #00ab9f;
+    border-radius: 5px;
+    text-align: center;
+    color: #00ab9f;
+    margin-bottom: 30px;
+
+}
+.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid #00ab9f;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #00ab9f;
+
+}
+.btn-default:active .filter-button:active
+{
+    background-color: #a5238e;
+    color: white;
+}
+
+.port-image
+{
+    width: 100%;
+}
+
+.gallery_product
+{
+    margin-bottom: 30px;
+}
+
+.contact-rooo{
+    @include big-padding();
+    background-color: #FFF;
+}
+.pt-00{
+    padding-top: 0px;
+}
+
+
